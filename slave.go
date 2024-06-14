@@ -113,3 +113,7 @@ func (s *Slave) makeRequest(params string, payload map[string]any) (map[string]a
 func (s *Slave) Progress(task map[string]any) {
 	s.makeRequest("slave=progress&taskId="+s.currentTaskId, task)
 }
+
+func (s *Slave) GetActionUrl() string {
+	return s.actionUrl
+}
